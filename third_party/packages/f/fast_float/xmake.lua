@@ -1,0 +1,8 @@
+package("fast_float")
+    set_homepage("https://github.com/fastfloat/fast_float")
+    set_license("MIT")
+    set_urls("$(projectdir)/third_party/sources/fast_float-$(version).tar.gz")
+    add_versions("8.2.1", "e18b59feaff3aca8e9426e6969f18a86b291e6ec6553744aa6b5a033a21d62ba")
+    on_install(function (package)
+        os.cp("include/fast_float", package:installdir("include"))
+    end)

@@ -1,0 +1,26 @@
+# Build outputs
+.xmake/
+build/
+.cache/
+compile_commands.json
+
+# Python virtualenv for benchmarks
+.venv-benchmark/
+
+# Editor / OS
+.DS_Store
+*.swp
+
+# Benchmark scratch outputs
+*.bench.out
+
+# Private local project data and source
+project/
+
+# Local investigation notes and obsolete dependency archive
+KNOWN_ISSUES.md
+third_party/sources/fmt-10.0.0.zip
+
+AGENTS.md
+
+Project.md
