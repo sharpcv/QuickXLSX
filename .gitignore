@@ -14,8 +14,8 @@ compile_commands.json
 # Benchmark scratch outputs
 *.bench.out
 
-# Private local project data and source
-project/
+# Private internal test project data and source
+internal-test-project/
 
 # Local investigation notes and obsolete dependency archive
 KNOWN_ISSUES.md
