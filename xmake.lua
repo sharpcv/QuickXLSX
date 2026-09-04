@@ -36,14 +36,6 @@ option("quickxlsx_native")
     set_description("Optimize for the build host CPU; unsuitable for portable release artifacts")
 option_end()
 
-option("quickxlsx_benchmarks")
-    set_default(false)
-    set_showmenu(true)
-    set_description("Build standalone CSV/XLSX throughput benchmarks")
-option_end()
-if has_config("quickxlsx_benchmarks") and has_config("quickxlsx_xlsx") then
-    add_requires("openxlsx", "xlnt")
-end
 
 if has_config("quickxlsx_xlsx") then
     add_requires("zlib-ng 2.3.3", {
@@ -117,10 +109,3 @@ target("quickxlsx")
 
 target_end()
 
-if os.isfile("tests/xmake.lua") then
-    includes("tests/xmake.lua")
-end
-
-if has_config("quickxlsx_benchmarks") or os.isfile("benchmarks/xmake.lua") then
-    includes("benchmarks/xmake.lua")
-end

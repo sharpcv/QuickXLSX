@@ -1,7 +1,0 @@
-target("test")
-    set_kind("binary")
-    add_files("test_main.cpp", "test_value.cpp", "test_range.cpp", "test_view.cpp", "test_csv.cpp", "test_xlsx.cpp")
-    add_deps("quickxlsx")
-    add_includedirs("$(projectdir)/include")
-    set_languages("c++20")
-target_end()
