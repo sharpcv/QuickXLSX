@@ -109,3 +109,15 @@ target("quickxlsx")
 
 target_end()
 
+-- Private local target; omitted when the ignored source directory is absent.
+if os.isfile("internal-test-project/main.cpp") then
+    target("internal_test_project")
+        set_kind("binary")
+        set_languages("c++20")
+        set_rundir(".")
+        add_files("internal-test-project/main.cpp")
+        add_deps("quickxlsx")
+        add_cxflags("/utf-8", {tools = {"cl"}})
+    target_end()
+end
+
